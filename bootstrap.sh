@@ -22,3 +22,4 @@ chsh --s $(which zsh)
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
 source .zshrc
+nvm install --lts
