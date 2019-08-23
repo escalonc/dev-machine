@@ -1,5 +1,7 @@
-sudo apt update && sudo apt upgrade
-sudo apt install git zsh build-essential httpie htop
+#!/usr/bin/env bash
+
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt install -y git zsh build-essential httpie htop
 
 # postgresSql install
 sudo apt-get install curl ca-certificates gnupg
@@ -17,9 +19,9 @@ git config --global core.editor nano
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
 # zsh
-chsh --s $(which zsh)
+sudo chsh -s $(which zsh)
 
-# nvm
+# # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | zsh
 source .zshrc
 nvm install --lts
